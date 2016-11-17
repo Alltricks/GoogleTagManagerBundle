@@ -2,7 +2,7 @@ services:
     google_tag_manager.factory:
         class: Xynnn\GoogleTagManagerBundle\Service\GoogleTagManagerFactory
         calls:
-            - [setContainer, [@service_container]]
+            - [setContainer, ["@service_container"]]
 
     google_tag_manager:
         class: Xynnn\GoogleTagManagerBundle\Service\GoogleTagManager
@@ -19,3 +19,9 @@ services:
         arguments: ["@templating.helper.google_tag_manager"]
         tags:
             - { name: "twig.extension" }
+
+    listener.google_tag_manager:
+        class: Xynnn\GoogleTagManagerBundle\EventListener\GoogleTagManagerListener
+        arguments: ["@service_container", "%google_tag_manager.autoAppend%"]
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
