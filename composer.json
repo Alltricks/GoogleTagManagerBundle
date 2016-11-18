@@ -1,26 +1,29 @@
 {
-    "name": "evheniy/gtm-bundle",
-    "description": "The GtmBundle adds the ability to add Google Tag Manager code to your application.",
-    "keywords": ["Google", "Tag", "Manager", "GTM", "Symfony", "latest"],
+    "name": "xynnn/google-tag-manager-bundle",
     "type": "symfony-bundle",
-    "license": "MIT",
+    "description": "Google Tag Manager Bundle for Symfony",
+    "keywords": ["Google Tag Manager", "Tag Manager"],
+    "homepage": "https://github.com/xyNNN/GoogleTagManagerBundle",
+    "license": "GNU LGPL v3.0",
     "authors": [
         {
-            "name":     "evheniy",
-            "homepage": "https://github.com/evheniy"
+            "name": "Philipp Bräutigam",
+            "email": "philipp.braeutigam@googlemail.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
-        "php":             ">=5.3.0",
-        "symfony/symfony": ">=2.3"
+        "php": ">=5.3.2",
+        "symfony/dependency-injection": "~2.8|~3.0",
+        "symfony/http-kernel": "~2.8|~3.0",
+        "symfony/config": "~2.8|~3.0"
     },
     "require-dev": {
-        "satooshi/php-coveralls": "dev-master"
+        "phpunit/phpunit":  "~4.3"
     },
     "autoload": {
-        "psr-0": {
-            "Evheniy\\GtmBundle": ""
+        "psr-4": {
+            "Xynnn\\GoogleTagManagerBundle\\": ""
         }
-    },
-    "target-dir" : "Evheniy/GtmBundle"
+    }
 }

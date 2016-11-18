@@ -10,7 +10,7 @@ The GoogleTagManagerBundle provides you an easy-to-use method to integrate the G
 ## Requirements
 
 - [x] PHP 5.3 and higher
-- [x] Symfony 2.0 and higher
+- [x] Symfony 2.8 and higher
 
 ## Install
 
@@ -20,7 +20,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```bash
-$ composer require xynnn/google-tag-manager-bundle "~1.0"
+$ composer require xynnn/google-tag-manager-bundle "~2.0"
 ```
 
 This command requires you to have Composer installed globally, as explained
@@ -86,6 +86,7 @@ $manager->addData('example', 'value');
 google_tag_manager:
     enabled: true
     id: "GTM-XXXXXX"
+    autoAppend: true|false
 ```
 
 ## Authors
@@ -96,5 +97,5 @@ google_tag_manager:
 + [twitter/pbraeutigam](http://twitter.com/pbraeutigam)
 
 ## License
-Copyright (c) 2015 Philipp Bräutigam  
+Copyright (c) 2015 Philipp Bräutigam
 This repository is released under the GNU LGPL v3.0 license.
